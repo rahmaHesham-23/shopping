@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #463b41;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(30deg (#463b41));
+}
+
+.left-side,
+.right-side,
+.right-side .card-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left-side {
+    flex-direction: column;
+}
+
+
+.left-side .caption {
+    font-size: 25px;
+}
+
+.left-side .main-btn {
+    width: 300px;
+    border: 2px #463b41 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left-side .main-btn span {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.left-side .main-btn a {
+    width: 30%;
+    height: 100%;
+    border-left: #463b41 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #463b41;
+    position: relative;
+    z-index: 1;
+}
+
+.left-side .main-btn a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+    background-color: #463b41;
+    color: #fff;
+    z-index: -1;
+}
+
+.left-side .main-btn a:hover {
+    color: #fff;
+
+}
+
+
+.left-side .main-btn a:hover::after {
+    width: 100%;
+    height: 100%;
+    transform: scaleY(1);
+    color: #fff;
+}
+
+.right-side .card-photo .photo {
+    width: 100px;
+    height: 600px;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+    margin: 10px;
+    transition: .5s;
+    transform: rotate(15deg);
+
+}
+
+.right-side .card-photo .photo:hover {
+    width: 300px;
+    cursor: pointer;
+}
+
+.right-side .card-photo .photo-1 {
+    background-image: url(../imgs/woman.jpg);
+}
+
+.right-side .card-photo .photo-2 {
+    background-image: url(../imgs/children.jpg);
+}
+
+.right-side .card-photo .photo-3 {
+    background-image: url(../imgs/men.jpg);
+}
+
+.photo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #463b41 0%, #463b41 20%, transparent);
+}
+
+.card-caption {
+    position: absolute;
+    color: #fff;
+    padding: 0 20px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.right-side .card-photo .photo:hover .card-caption {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.right-side .card-photo .photo .card-caption span:hover {
+    color: gold;
+}
+
+
+.items {
+    height: 100vh;
+}
+
+
+.all-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding: 50px; */
+}
+
+.all-cards .card {
+    margin-right: 20px;
+    position: relative;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #463b41;
+    margin: 0 10px;
+    position: absolute;
+}
+
+.carousel-control-prev-icon {
+    left: 20px;
+}
+
+.carousel-control-next-icon {
+    right: 20px;
+}
+.card img {
+    height: 70%;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: #463b41;
+    font-size: 25px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btns a {
+    background-color: #463b41 !important;
+    border: none;
+    box-shadow: 4px 5px 2px #463b41;
+}
+
+
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.total p span {
+    color: green;
+}
